@@ -124,7 +124,7 @@ extern const char *g_at_mfg_nvs_name;
 #define AT_UART_BAUD_RATE_MIN                       80
 #endif
 
-#define AT_UART_BAUD_RATE_DEF                       115200
+#define AT_UART_BAUD_RATE_DEF                       921600
 
 #define AT_UART_PATTERN_TIMEOUT_MS                  20
 
@@ -283,7 +283,7 @@ static void at_uart_init(void)
 {
     at_nvm_uart_config_struct uart_nvm_config;
     uart_config_t uart_config = {
-        .baud_rate = 115200,
+        .baud_rate = 921600,
         .data_bits = CONFIG_AT_UART_DEFAULT_DATABITS - 5,
         .parity = esp_at_uart_parity_table[CONFIG_AT_UART_DEFAULT_PARITY_BITS],
         .stop_bits = CONFIG_AT_UART_DEFAULT_STOPBITS,
